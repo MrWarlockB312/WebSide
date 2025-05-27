@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión o Registrarse</title>
+    <link rel="stylesheet" href="../styles/Styles.css">
+</head>
+<body>
+    <div id="login">
+        <!-- Botones para alternar entre formularios -->
+        <div class="toggle-buttons">
+            <button type="button" id="show-login" class="elemento toggle-btn active">Iniciar Sesión</button>
+            <button type="button" id="show-register" class="elemento toggle-btn">Registrarse</button>
+        </div>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <form id="loginForm" action="/login" method="POST" style="display: block;">
+            <input type="text" id="usuario" name="usuario" class="elemento" placeholder="Usuario" required aria-label="Usuario">
+            <input type="password" id="contrasena" name="contrasena" class="elemento" placeholder="Contraseña" required aria-label="Contraseña">
+            <button type="submit" class="elemento">Iniciar Sesión</button>
+            <p id="mensaje-login"></p>
+        </form>
+
+        <!-- Formulario de Registro -->
+        <form id="registerForm" action="/register" method="POST" style="display: none;">
+            <input type="text" id="nuevo-usuario" name="nuevo-usuario" class="elemento" placeholder="Nuevo Usuario" required aria-label="Nuevo Usuario">
+            <input type="password" id="nueva-contrasena" name="nueva-contrasena" class="elemento" placeholder="Nueva Contraseña" required aria-label="Nueva Contraseña">
+            <button type="submit" class="elemento">Registrarse</button>
+            <p id="mensaje-register"></p>
+        </form>
+    </div>
+    <script src="../scripts/Scripts.js"></script>
+</body>
+</html>
